@@ -13,6 +13,8 @@
 		FD23BE07246B1999009DF385 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23BE05246B1999009DF385 /* Main.storyboard */; };
 		FD23BE09246B199A009DF385 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD23BE08246B199A009DF385 /* Assets.xcassets */; };
 		FD23BE0C246B199A009DF385 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23BE0A246B199A009DF385 /* LaunchScreen.storyboard */; };
+		FD27F934246C323A00EECF20 /* MatchCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F933246C323A00EECF20 /* MatchCards.swift */; };
+		FD27F936246C326D00EECF20 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD27F935246C326D00EECF20 /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		FD23BE08246B199A009DF385 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD23BE0B246B199A009DF385 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD23BE0D246B199A009DF385 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD27F933246C323A00EECF20 /* MatchCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchCards.swift; sourceTree = "<group>"; };
+		FD27F935246C326D00EECF20 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				FD23BE05246B1999009DF385 /* Main.storyboard */,
 				FD23BE0A246B199A009DF385 /* LaunchScreen.storyboard */,
 				FD23BE0D246B199A009DF385 /* Info.plist */,
+				FD27F937246C394100EECF20 /* Model */,
 			);
 			path = MatchCards;
 			sourceTree = "<group>";
@@ -73,6 +78,15 @@
 				FD23BE08246B199A009DF385 /* Assets.xcassets */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		FD27F937246C394100EECF20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FD27F933246C323A00EECF20 /* MatchCards.swift */,
+				FD27F935246C326D00EECF20 /* Card.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD23BE04246B1999009DF385 /* ViewController.swift in Sources */,
+				FD27F934246C323A00EECF20 /* MatchCards.swift in Sources */,
+				FD27F936246C326D00EECF20 /* Card.swift in Sources */,
 				FD23BE00246B1999009DF385 /* AppDelegate.swift in Sources */,
 				FD23BE02246B1999009DF385 /* SceneDelegate.swift in Sources */,
 			);
