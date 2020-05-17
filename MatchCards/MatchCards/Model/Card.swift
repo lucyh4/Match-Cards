@@ -9,7 +9,16 @@
 import Foundation
 
 
-struct Card{
+struct Card : Hashable{
+//    var hashValue : Int { return identifier}
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+    static func == (lhs: Card, rhs: Card) -> Bool {
+        return lhs.identifier == rhs.identifier
+    }
+
     var isFaceUp = false
     var isMatched = false
     var identifier : Int
@@ -17,7 +26,7 @@ struct Card{
     
     
     //MARK: - Static method to generate unique identifiers for cards
-    static func getUniqueIdentifier() -> Int{
+    static private func getUniqueIdentifier() -> Int{
         cardNumber += 1
         return cardNumber
         
