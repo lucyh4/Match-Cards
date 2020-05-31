@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD2084182472F722007AFA89 /* CardThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2084172472F722007AFA89 /* CardThemeViewController.swift */; };
 		FD23BE00246B1999009DF385 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23BDFF246B1999009DF385 /* AppDelegate.swift */; };
 		FD23BE02246B1999009DF385 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23BE01246B1999009DF385 /* SceneDelegate.swift */; };
 		FD23BE04246B1999009DF385 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23BE03246B1999009DF385 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FD2084172472F722007AFA89 /* CardThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardThemeViewController.swift; sourceTree = "<group>"; };
 		FD23BDFC246B1999009DF385 /* MatchCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MatchCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD23BDFF246B1999009DF385 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FD23BE01246B1999009DF385 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				FD23BE13246B2E23009DF385 /* Supporting files */,
 				FD23BE03246B1999009DF385 /* ViewController.swift */,
+				FD2084172472F722007AFA89 /* CardThemeViewController.swift */,
 				FD23BE05246B1999009DF385 /* Main.storyboard */,
 				FD23BE0A246B199A009DF385 /* LaunchScreen.storyboard */,
 				FD23BE0D246B199A009DF385 /* Info.plist */,
@@ -164,6 +167,7 @@
 				FD27F934246C323A00EECF20 /* MatchCards.swift in Sources */,
 				FD27F936246C326D00EECF20 /* Card.swift in Sources */,
 				FD23BE00246B1999009DF385 /* AppDelegate.swift in Sources */,
+				FD2084182472F722007AFA89 /* CardThemeViewController.swift in Sources */,
 				FD23BE02246B1999009DF385 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

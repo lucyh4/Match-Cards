@@ -10,8 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBAction func newGameButtonPressed(_ sender: UIButton) {
+        stringOfEmojis = theme!
+        emoji = [Card : String]()
+        
+        for index in arrOfCards.indices{
+            let button = arrOfCards[index]
+            button.isHidden = false
+            button.backgroundColor =  #colorLiteral(red: 0.1188073778, green: 0, blue: 0.7150618655, alpha: 1)
+            game.cards[index].isFaceUp = false
+            game.cards[index].isMatched = false
+        }
+        updateViewFromModel()
+        game.score = 0
+        scoreLabel.text = "Score :0"
+        numOfFlips = 0
+        
+    }
     
-    
+    @IBOutlet private weak var scoreLabel: UILabel!{
+        didSet{
+            updateScoreLabel()
+        }
+    }
     @IBOutlet private weak var flipLabel: UILabel! {
         didSet{
             updateFlipLabel()
@@ -30,14 +51,28 @@ class ViewController: UIViewController {
     var numOfFlips = 0 {
         didSet{
             updateFlipLabel()
+            
         }
     }
+//
+//    var score = 0 {
+//        didSet{
+//            updateScoreLabel()
+//        }
+//    }
+    
+    //MARK: - Function to update ScoreLabel
+    
+    private func updateScoreLabel(){
+        scoreLabel.text = "Score :\(game.score)"
+    }
+    //MARK: - Function to update FlipLabel
     
     private func updateFlipLabel(){
         
         let attributes : [NSAttributedString.Key : Any] = [
-            .strokeWidth : 5.0,
-            .strokeColor : #colorLiteral(red: 0.944884479, green: 0.5015266538, blue: 0.247677058, alpha: 1)
+            .strokeWidth : 8.0,
+            .strokeColor : #colorLiteral(red: 0.1760931909, green: 0.5505955219, blue: 0.9676393867, alpha: 1)
             
         ]
         let attributedString = NSAttributedString(string:  "Flips: \(numOfFlips)", attributes: attributes)
@@ -61,22 +96,41 @@ class ViewController: UIViewController {
     //MARK: - Function to update View
     private func updateViewFromModel(){
         for index in arrOfCards.indices{
+           // print(index)
             let button = arrOfCards[index]
             let card = game.cards[index]
-        //    print(index)
+            //    print(index)
             if card.isFaceUp{
                 button.setTitle(emoji(for : card), for: .normal)
                 button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
             }else{
                 button.setTitle("", for: .normal)
-                button.backgroundColor = card.isMatched ? #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 0) : #colorLiteral(red: 0.944884479, green: 0.5015266538, blue: 0.247677058, alpha: 1)
+                
+                if card.isMatched == true{
+                  //  score += 1    //Adding already matched cards also, need to fix this score
+                    
+                   // print(score)
+                updateScoreLabel()
+                    button.backgroundColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 0)
+                }else{
+                    
+                    button.backgroundColor = #colorLiteral(red: 0.1188073778, green: 0, blue: 0.7150618655, alpha: 1)
+                }
+                
+                
             }
+            
         }
     }
     
     //MARK: - String of emojis
     //  var arrayOfEmojis = ["😇", "😈", "👻", "🎃", "😴", "🖐🏻", "👁", "✍🏿", "🔴", "🔵"]
-    
+    var theme : String?{
+        didSet{
+            stringOfEmojis = theme ?? ""
+            emoji = [:]
+        }
+    }
     var stringOfEmojis = "😇😈👻🎃😴🖐🏻👁✍🏿🔴🔵"
     
     //MARK: - Dictionary for Created cards Emoji
